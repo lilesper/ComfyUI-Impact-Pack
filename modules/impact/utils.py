@@ -76,7 +76,7 @@ def general_tensor_resize(image, w: int, h: int):
 
 
 # TODO: Sadly, we need LANCZOS
-LANCZOS = (Image.Resampling.LANCZOS if hasattr(Image, 'Resampling') else Image.LANCZOS)
+LANCZOS = (Image.LANCZOS if hasattr(Image, 'Resampling') else Image.LANCZOS)
 def tensor_resize(image, w: int, h: int):
     _tensor_check_image(image)
     if image.shape[3] >= 3:
